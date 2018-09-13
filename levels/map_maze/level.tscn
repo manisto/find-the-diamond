@@ -1,0 +1,949 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://levels/map_maze/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://levels/map_maze/player.gd" type="Script" id=2]
+[ext_resource path="res://levels/map_maze/corridor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://levels/map_maze/corner.tscn" type="PackedScene" id=4]
+[ext_resource path="res://levels/map_maze/wall.tscn" type="PackedScene" id=5]
+[ext_resource path="res://levels/map_maze/floor.tscn" type="PackedScene" id=6]
+
+[node name="map_maze" type="Spatial" index="0"]
+
+[node name="player" parent="." index="0" instance=ExtResource( 1 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 0, 2, 0 )
+script = ExtResource( 2 )
+
+[node name="Camera" type="Camera" parent="player" index="2"]
+
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = false
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 100.0
+
+[node name="maze" type="Spatial" parent="." index="1"]
+
+[node name="entrance" parent="maze" index="0" instance=ExtResource( 3 )]
+
+[node name="line_01" type="Spatial" parent="maze" index="1"]
+
+editor/display_folded = true
+
+[node name="corridor2" parent="maze/line_01" index="0" instance=ExtResource( 3 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -8, 0, 8 )
+
+[node name="corridor5" parent="maze/line_01" index="1" instance=ExtResource( 3 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 24, 0, 8 )
+
+[node name="corridor6" parent="maze/line_01" index="2" instance=ExtResource( 3 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 32, 0, 8 )
+
+[node name="corridor7" parent="maze/line_01" index="3" instance=ExtResource( 3 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 40, 0, 8 )
+
+[node name="corridor8" parent="maze/line_01" index="4" instance=ExtResource( 3 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 56, 0, 8 )
+
+[node name="corridor10" parent="maze/line_01" index="5" instance=ExtResource( 3 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 64, 0, 8 )
+
+[node name="corridor11" parent="maze/line_01" index="6" instance=ExtResource( 3 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 72, 0, 8 )
+
+[node name="corridor9" parent="maze/line_01" index="7" instance=ExtResource( 3 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 48, 0, 8 )
+
+[node name="corridor4" parent="maze/line_01" index="8" instance=ExtResource( 3 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -64, 0, 8 )
+
+[node name="corridor3" parent="maze/line_01" index="9" instance=ExtResource( 3 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -32, 0, 8 )
+
+[node name="corner" parent="maze/line_01" index="10" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 8, 0, 8 )
+
+[node name="corner6" parent="maze/line_01" index="11" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 80, 0, 8 )
+
+[node name="corner3" parent="maze/line_01" index="12" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -40, 0, 8 )
+
+[node name="corner4" parent="maze/line_01" index="13" instance=ExtResource( 4 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -48, 0, 8 )
+
+[node name="corner5" parent="maze/line_01" index="14" instance=ExtResource( 4 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -72, 0, 8 )
+
+[node name="corner2" parent="maze/line_01" index="15" instance=ExtResource( 4 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -9.53674e-007, 0, 8 )
+
+[node name="wall" parent="maze/line_01" index="16" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -16, 0, 8 )
+
+[node name="wall4" parent="maze/line_01" index="17" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 16, 0, 8 )
+
+[node name="wall2" parent="maze/line_01" index="18" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -24, 0, 8 )
+
+[node name="wall3" parent="maze/line_01" index="19" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -56, 0, 8 )
+
+[node name="line_02" type="Spatial" parent="maze" index="2"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 16 )
+
+[node name="corridor" parent="maze/line_02" index="0" instance=ExtResource( 3 )]
+
+[node name="wall" parent="maze/line_02" index="1" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -8, 0, 0 )
+
+[node name="floor" parent="maze/line_02" index="2" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 0 )
+
+[node name="floor2" parent="maze/line_02" index="3" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 0 )
+
+[node name="corridor2" parent="maze/line_02" index="4" instance=ExtResource( 3 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 0 )
+
+[node name="floor3" parent="maze/line_02" index="5" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 0 )
+
+[node name="wall2" parent="maze/line_02" index="6" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -48, 0, 0 )
+
+[node name="wall3" parent="maze/line_02" index="7" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -56, 0, 0 )
+
+[node name="corner" parent="maze/line_02" index="8" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -64, 0, 0 )
+
+[node name="wall4" parent="maze/line_02" index="9" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, -72, 0, 0 )
+
+[node name="floor4" parent="maze/line_02" index="10" instance=ExtResource( 6 )]
+
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, -80, 0, 0 )
+
+[node name="wall5" parent="maze/line_02" index="11" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -88, 0, 0 )
+
+[node name="corner2" parent="maze/line_02" index="12" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -96, 0, 0 )
+
+[node name="wall6" parent="maze/line_02" index="13" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -104, 0, 0 )
+
+[node name="wall7" parent="maze/line_02" index="14" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, -112, 0, 0 )
+
+[node name="wall8" parent="maze/line_02" index="15" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, -120, 0, 0 )
+
+[node name="wall9" parent="maze/line_02" index="16" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -128, 0, 0 )
+
+[node name="wall10" parent="maze/line_02" index="17" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -136, 0, 0 )
+
+[node name="wall11" parent="maze/line_02" index="18" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, -1.42109e-014, 0, 1, 0, 1.42109e-014, 0, 1, -144, 0, 0 )
+
+[node name="wall12" parent="maze/line_02" index="19" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -152, 0, 1.90735e-006 )
+
+[node name="line_03" type="Spatial" parent="maze" index="3"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 24 )
+
+[node name="corner" parent="maze/line_03" index="0" instance=ExtResource( 4 )]
+
+[node name="wall" parent="maze/line_03" index="1" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -8, 0, -1.90735e-006 )
+
+[node name="wall2" parent="maze/line_03" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -16, 0, -1.90735e-006 )
+
+[node name="wall3" parent="maze/line_03" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -24, 0, 0 )
+
+[node name="wall4" parent="maze/line_03" index="4" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -32, 0, 0 )
+
+[node name="wall5" parent="maze/line_03" index="5" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -40, 0, 0 )
+
+[node name="wall6" parent="maze/line_03" index="6" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -48, 0, 0 )
+
+[node name="wall7" parent="maze/line_03" index="7" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -56, 0, 0 )
+
+[node name="wall8" parent="maze/line_03" index="8" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -64, 0, 0 )
+
+[node name="wall9" parent="maze/line_03" index="9" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -72, 0, 0 )
+
+[node name="wall10" parent="maze/line_03" index="10" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -80, 0, 0 )
+
+[node name="wall11" parent="maze/line_03" index="11" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -88, 0, 0 )
+
+[node name="wall12" parent="maze/line_03" index="12" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -96, 0, -1.90735e-006 )
+
+[node name="wall13" parent="maze/line_03" index="13" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -104, 0, -1.90735e-006 )
+
+[node name="wall14" parent="maze/line_03" index="14" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -112, 0, -1.90735e-006 )
+
+[node name="wall15" parent="maze/line_03" index="15" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -120, 0, -1.90735e-006 )
+
+[node name="wall16" parent="maze/line_03" index="16" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -128, 0, -1.90735e-006 )
+
+[node name="wall17" parent="maze/line_03" index="17" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -136, 0, 0 )
+
+[node name="wall18" parent="maze/line_03" index="18" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -144, 0, 0 )
+
+[node name="wall19" parent="maze/line_03" index="19" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -152, 0, 0 )
+
+[node name="line_04" type="Spatial" parent="maze" index="4"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 32 )
+
+[node name="wall" parent="maze/line_04" index="0" instance=ExtResource( 5 )]
+
+[node name="wall2" parent="maze/line_04" index="1" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -8, 0, 0 )
+
+[node name="wall3" parent="maze/line_04" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 0 )
+
+[node name="wall4" parent="maze/line_04" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -24, 0, 0 )
+
+[node name="wall5" parent="maze/line_04" index="4" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 3.8147e-006 )
+
+[node name="wall6" parent="maze/line_04" index="5" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -40, 0, 0 )
+
+[node name="floor" parent="maze/line_04" index="6" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 0, 0 )
+
+[node name="wall7" parent="maze/line_04" index="7" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -56, 0, -1.90735e-006 )
+
+[node name="wall8" parent="maze/line_04" index="8" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -64, 0, -1.90735e-006 )
+
+[node name="wall9" parent="maze/line_04" index="9" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -72, 0, -1.90735e-006 )
+
+[node name="wall10" parent="maze/line_04" index="10" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -80, 0, -1.90735e-006 )
+
+[node name="wall11" parent="maze/line_04" index="11" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -88, 0, -1.90735e-006 )
+
+[node name="floor2" parent="maze/line_04" index="12" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, 0 )
+
+[node name="wall13" parent="maze/line_04" index="13" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -104, 0, -1.90735e-006 )
+
+[node name="wall14" parent="maze/line_04" index="14" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -112, 0, 0 )
+
+[node name="wall15" parent="maze/line_04" index="15" instance=ExtResource( 5 )]
+
+transform = Transform( -2.18557e-007, 0, 1, 0, 1, 0, -1, 0, -2.18557e-007, -120, 0, -3.8147e-006 )
+
+[node name="wall16" parent="maze/line_04" index="16" instance=ExtResource( 5 )]
+
+transform = Transform( 3.0598e-007, 0, -1, 0, 1, 0, 1, 0, 3.0598e-007, -128, 0, -3.8147e-006 )
+
+[node name="wall17" parent="maze/line_04" index="17" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -2.62268e-007, 0, 1, 0, 2.62268e-007, 0, -1, -136, 0, 0 )
+
+[node name="wall18" parent="maze/line_04" index="18" instance=ExtResource( 5 )]
+
+transform = Transform( 3.0598e-007, 0, -1, 0, 1, 0, 1, 0, 3.0598e-007, -144, 0, 0 )
+
+[node name="corner" parent="maze/line_04" index="19" instance=ExtResource( 4 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -152, 0, 0 )
+
+[node name="line_05" type="Spatial" parent="maze" index="5"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 40 )
+
+[node name="corridor" parent="maze/line_05" index="0" instance=ExtResource( 3 )]
+
+[node name="floor" parent="maze/line_05" index="1" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0 )
+
+[node name="wall" parent="maze/line_05" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -16, 0, 0 )
+
+[node name="wall2" parent="maze/line_05" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -24, 0, 0 )
+
+[node name="corner" parent="maze/line_05" index="4" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -32, 0, 0 )
+
+[node name="wall3" parent="maze/line_05" index="5" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -40, 0, 0 )
+
+[node name="wall4" parent="maze/line_05" index="6" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -48, 0, 0 )
+
+[node name="floor2" parent="maze/line_05" index="7" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 0, 0 )
+
+[node name="wall5" parent="maze/line_05" index="8" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -64, 0, 0 )
+
+[node name="wall6" parent="maze/line_05" index="9" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -72, 0, 0 )
+
+[node name="wall7" parent="maze/line_05" index="10" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -80, 0, 0 )
+
+[node name="wall8" parent="maze/line_05" index="11" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -88, 0, 0 )
+
+[node name="wall9" parent="maze/line_05" index="12" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -96, 0, 0 )
+
+[node name="corridor2" parent="maze/line_05" index="13" instance=ExtResource( 3 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -104, 0, 0 )
+
+[node name="wall10" parent="maze/line_05" index="14" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -112, 0, 0 )
+
+[node name="wall11" parent="maze/line_05" index="15" instance=ExtResource( 5 )]
+
+transform = Transform( -2.18557e-007, 0, 1, 0, 1, 0, -1, 0, -2.18557e-007, -120, 0, -3.8147e-006 )
+
+[node name="wall12" parent="maze/line_05" index="16" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -128, 0, 0 )
+
+[node name="wall13" parent="maze/line_05" index="17" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -136, 0, 0 )
+
+[node name="wall14" parent="maze/line_05" index="18" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -144, 0, 0 )
+
+[node name="corner2" parent="maze/line_05" index="19" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -152, 0, 0 )
+
+[node name="line_06" type="Spatial" parent="maze" index="6"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 48 )
+
+[node name="corridor" parent="maze/line_06" index="0" instance=ExtResource( 3 )]
+
+[node name="corner" parent="maze/line_06" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -8, 0, 0 )
+
+[node name="wall" parent="maze/line_06" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -16, 0, 3.8147e-006 )
+
+[node name="wall2" parent="maze/line_06" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -24, 0, 3.8147e-006 )
+
+[node name="floor" parent="maze/line_06" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 0 )
+
+[node name="corner2" parent="maze/line_06" index="5" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -40, 0, 0 )
+
+[node name="wall3" parent="maze/line_06" index="6" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -48, 0, 3.8147e-006 )
+
+[node name="wall4" parent="maze/line_06" index="7" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -56, 0, 3.8147e-006 )
+
+[node name="floor2" parent="maze/line_06" index="8" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -64, 0, 0 )
+
+[node name="wall5" parent="maze/line_06" index="9" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -72, 0, 3.8147e-006 )
+
+[node name="floor3" parent="maze/line_06" index="10" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 0, 0 )
+
+[node name="corner3" parent="maze/line_06" index="11" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -88, 0, 0 )
+
+[node name="wall6" parent="maze/line_06" index="12" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -96, 0, 3.8147e-006 )
+
+[node name="floor4" parent="maze/line_06" index="13" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, 0 )
+
+[node name="wall7" parent="maze/line_06" index="14" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -112, 0, 3.8147e-006 )
+
+[node name="wall8" parent="maze/line_06" index="15" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -120, 0, 3.8147e-006 )
+
+[node name="wall9" parent="maze/line_06" index="16" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -128, 0, 3.8147e-006 )
+
+[node name="corner4" parent="maze/line_06" index="17" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -136, 0, 0 )
+
+[node name="wall10" parent="maze/line_06" index="18" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -144, 0, 3.8147e-006 )
+
+[node name="wall11" parent="maze/line_06" index="19" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -152, 0, 0 )
+
+[node name="line_07" type="Spatial" parent="maze" index="7"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 56 )
+
+[node name="corridor" parent="maze/line_07" index="0" instance=ExtResource( 3 )]
+
+[node name="floor" parent="maze/line_07" index="1" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0 )
+
+[node name="corner" parent="maze/line_07" index="2" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -16, 0, 0 )
+
+[node name="wall" parent="maze/line_07" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -24, 0, 0 )
+
+[node name="wall2" parent="maze/line_07" index="4" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -32, 0, 0 )
+
+[node name="wall3" parent="maze/line_07" index="5" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 1.74845e-007, 0, 1, 0, -1.74845e-007, 0, 1, -40, 0, -3.8147e-006 )
+
+[node name="wall4" parent="maze/line_07" index="6" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -48, 0, -3.8147e-006 )
+
+[node name="corner2" parent="maze/line_07" index="7" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, -1.06581e-014, 0, 1, 0, 1.06581e-014, 0, 1, -56, 0, 0 )
+
+[node name="wall5" parent="maze/line_07" index="8" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 1.74845e-007, 0, 1, 0, -1.74845e-007, 0, 1, -64, 0, -7.62939e-006 )
+
+[node name="wall6" parent="maze/line_07" index="9" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 1.74845e-007, 0, 1, 0, -1.74845e-007, 0, 1, -72, 0, -7.62939e-006 )
+
+[node name="corner3" parent="maze/line_07" index="10" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, -1.06581e-014, 0, 1, 0, 1.06581e-014, 0, 1, -80, 0, 0 )
+
+[node name="wall7" parent="maze/line_07" index="11" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -2.62268e-007, 0, 1, 0, 2.62268e-007, 0, -1, -88, 0, -7.62939e-006 )
+
+[node name="wall8" parent="maze/line_07" index="12" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -2.62268e-007, 0, 1, 0, 2.62268e-007, 0, -1, -96, 0, -7.62939e-006 )
+
+[node name="wall9" parent="maze/line_07" index="13" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -2.62268e-007, 0, 1, 0, 2.62268e-007, 0, -1, -104, 0, -7.62939e-006 )
+
+[node name="floor2" parent="maze/line_07" index="14" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -112, 0, 0 )
+
+[node name="wall10" parent="maze/line_07" index="15" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -2.62268e-007, 0, 1, 0, 2.62268e-007, 0, -1, -120, 0, -7.62939e-006 )
+
+[node name="wall11" parent="maze/line_07" index="16" instance=ExtResource( 5 )]
+
+transform = Transform( 3.0598e-007, 0, -1, 0, 1, 0, 1, 0, 3.0598e-007, -128, 0, -7.62939e-006 )
+
+[node name="wall12" parent="maze/line_07" index="17" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -2.62268e-007, 0, 1, 0, 2.62268e-007, 0, -1, -136, 0, -3.8147e-006 )
+
+[node name="wall13" parent="maze/line_07" index="18" instance=ExtResource( 5 )]
+
+transform = Transform( 3.0598e-007, 0, -1, 0, 1, 0, 1, 0, 3.0598e-007, -144, 0, -3.8147e-006 )
+
+[node name="wall14" parent="maze/line_07" index="19" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -2.62268e-007, 0, 1, 0, 2.62268e-007, 0, -1, -152, 0, 0 )
+
+[node name="line_08" type="Spatial" parent="maze" index="8"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 64 )
+
+[node name="wall" parent="maze/line_08" index="0" instance=ExtResource( 5 )]
+
+[node name="corner" parent="maze/line_08" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0 )
+
+[node name="floor" parent="maze/line_08" index="2" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 0 )
+
+[node name="wall2" parent="maze/line_08" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -24, 0, 0 )
+
+[node name="wall3" parent="maze/line_08" index="4" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -32, 0, 0 )
+
+[node name="corner2" parent="maze/line_08" index="5" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -40, 0, 0 )
+
+[node name="floor2" parent="maze/line_08" index="6" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 0, 0 )
+
+[node name="wall4" parent="maze/line_08" index="7" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -56, 0, 0 )
+
+[node name="corner3" parent="maze/line_08" index="8" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -64, 0, 0 )
+
+[node name="wall5" parent="maze/line_08" index="9" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, -72, 0, 0 )
+
+[node name="floor3" parent="maze/line_08" index="10" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 0, 0 )
+
+[node name="corner4" parent="maze/line_08" index="11" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -88, 0, 0 )
+
+[node name="wall6" parent="maze/line_08" index="12" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -96, 0, 0 )
+
+[node name="wall7" parent="maze/line_08" index="13" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, -104, 0, 0 )
+
+[node name="wall8" parent="maze/line_08" index="14" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, -112, 0, 0 )
+
+[node name="corner5" parent="maze/line_08" index="15" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -120, 0, 0 )
+
+[node name="floor4" parent="maze/line_08" index="16" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -128, 0, 0 )
+
+[node name="wall9" parent="maze/line_08" index="17" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, -136, 0, 0 )
+
+[node name="floor5" parent="maze/line_08" index="18" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -144, 0, 0 )
+
+[node name="corner6" parent="maze/line_08" index="19" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -152, 0, 0 )
+
+[node name="line_09" type="Spatial" parent="maze" index="9"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 72 )
+
+[node name="corner" parent="maze/line_09" index="0" instance=ExtResource( 4 )]
+
+[node name="wall" parent="maze/line_09" index="1" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -8, 0, 0 )
+
+[node name="corner2" parent="maze/line_09" index="2" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -16, 0, 0 )
+
+[node name="floor" parent="maze/line_09" index="3" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 0 )
+
+[node name="wall2" parent="maze/line_09" index="4" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -32, 0, 0 )
+
+[node name="wall3" parent="maze/line_09" index="5" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -40, 0, 0 )
+
+[node name="corner3" parent="maze/line_09" index="6" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -48, 0, 0 )
+
+[node name="wall4" parent="maze/line_09" index="7" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -56, 0, 0 )
+
+[node name="wall5" parent="maze/line_09" index="8" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -64, 0, 0 )
+
+[node name="corner4" parent="maze/line_09" index="9" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -72, 0, 0 )
+
+[node name="wall6" parent="maze/line_09" index="10" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -80, 0, 0 )
+
+[node name="floor2" parent="maze/line_09" index="11" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, 0 )
+
+[node name="corner5" parent="maze/line_09" index="12" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, 0 )
+
+[node name="corner6" parent="maze/line_09" index="13" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -104, 0, 0 )
+
+[node name="wall7" parent="maze/line_09" index="14" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -112, 0, 0 )
+
+[node name="wall8" parent="maze/line_09" index="15" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -120, 0, 0 )
+
+[node name="wall9" parent="maze/line_09" index="16" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, -128, 0, 0 )
+
+[node name="wall10" parent="maze/line_09" index="17" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, -136, 0, 0 )
+
+[node name="wall11" parent="maze/line_09" index="18" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, -144, 0, 0 )
+
+[node name="wall12" parent="maze/line_09" index="19" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, -152, 0, 0 )
+
+[node name="line_10" type="Spatial" parent="maze" index="10"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 80 )
+
+[node name="wall" parent="maze/line_10" index="0" instance=ExtResource( 5 )]
+
+[node name="wall2" parent="maze/line_10" index="1" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -8, 0, 0 )
+
+[node name="wall3" parent="maze/line_10" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, -16, 0, 0 )
+
+[node name="wall4" parent="maze/line_10" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -24, 0, 0 )
+
+[node name="wall5" parent="maze/line_10" index="4" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, -32, 0, 0 )
+
+[node name="wall6" parent="maze/line_10" index="5" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -40, 0, 0 )
+
+[node name="floor" parent="maze/line_10" index="6" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 0, 0 )
+
+[node name="wall7" parent="maze/line_10" index="7" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -56, 0, 0 )
+
+[node name="wall8" parent="maze/line_10" index="8" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -64, 0, 0 )
+
+[node name="wall9" parent="maze/line_10" index="9" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -72, 0, 0 )
+
+[node name="floor2" parent="maze/line_10" index="10" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 0, 0 )
+
+[node name="wall10" parent="maze/line_10" index="11" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -88, 0, 0 )
+
+[node name="wall11" parent="maze/line_10" index="12" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, 0 )
+
+[node name="wall12" parent="maze/line_10" index="13" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -104, 0, 0 )
+
+[node name="floor3" parent="maze/line_10" index="14" instance=ExtResource( 6 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -112, 0, 0 )
+
+[node name="wall13" parent="maze/line_10" index="15" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -120, 0, 0 )
+
+[node name="wall14" parent="maze/line_10" index="16" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -128, 0, 0 )
+
+[node name="corner" parent="maze/line_10" index="17" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -136, 0, 0 )
+
+[node name="corner2" parent="maze/line_10" index="18" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -144, 0, 0 )
+
+[node name="wall15" parent="maze/line_10" index="19" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -2.62268e-007, 0, 1, 0, 2.62268e-007, 0, -1, -152, 0, -7.62939e-006 )
+
+[node name="line_11" type="Spatial" parent="maze" index="11"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 88 )
+
+[node name="wall" parent="maze/line_11" index="0" instance=ExtResource( 5 )]
+
+[node name="wall2" parent="maze/line_11" index="1" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0 )
+
+[node name="wall3" parent="maze/line_11" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -16, 0, 0 )
+
+[node name="wall4" parent="maze/line_11" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 0 )
+
+[node name="wall5" parent="maze/line_11" index="4" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -32, 0, 0 )
+
+[node name="wall6" parent="maze/line_11" index="5" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 0 )
+
+[node name="wall7" parent="maze/line_11" index="6" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -48, 0, 0 )
+
+[node name="wall8" parent="maze/line_11" index="7" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 0, 0 )
+
+[node name="wall9" parent="maze/line_11" index="8" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -64, 0, 0 )
+
+[node name="wall10" parent="maze/line_11" index="9" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -72, 0, 0 )
+
+[node name="corner" parent="maze/line_11" index="10" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 0, 0 )
+
+[node name="wall11" parent="maze/line_11" index="11" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, -88, 0, 0 )
+
+[node name="wall12" parent="maze/line_11" index="12" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -96, 0, 0 )
+
+[node name="corner2" parent="maze/line_11" index="13" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -104, 0, 0 )
+
+[node name="wall13" parent="maze/line_11" index="14" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -112, 0, 0 )
+
+[node name="wall14" parent="maze/line_11" index="15" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, -120, 0, 0 )
+
+[node name="wall15" parent="maze/line_11" index="16" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -128, 0, 0 )
+
+[node name="wall16" parent="maze/line_11" index="17" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -136, 0, 0 )
+
+[node name="wall17" parent="maze/line_11" index="18" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -144, 0, 0 )
+
+[node name="wall18" parent="maze/line_11" index="19" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, -152, 0, -7.62939e-006 )
+
+

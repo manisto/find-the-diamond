@@ -866,7 +866,9 @@ transform = Transform( -1, 0, -2.62268e-007, 0, 1, 0, 2.62268e-007, 0, -1, -152,
 
 [node name="line_11" type="Spatial" parent="maze" index="11"]
 
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 88 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="wall" parent="maze/line_11" index="0" instance=ExtResource( 5 )]
 
@@ -945,5 +947,87 @@ transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -144,
 [node name="wall18" parent="maze/line_11" index="19" instance=ExtResource( 5 )]
 
 transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, -152, 0, -7.62939e-006 )
+
+[node name="line_12" type="Spatial" parent="maze" index="12"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 96 )
+
+[node name="wall" parent="maze/line_12" index="0" instance=ExtResource( 5 )]
+
+[node name="corner" parent="maze/line_12" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0 )
+
+[node name="wall2" parent="maze/line_12" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -16, 0, 0 )
+
+[node name="wall3" parent="maze/line_12" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -24, 0, 7.62939e-006 )
+
+[node name="floor" parent="maze/line_12" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 0 )
+
+[node name="wall4" parent="maze/line_12" index="5" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -40, 0, 1.52588e-005 )
+
+[node name="corner2" parent="maze/line_12" index="6" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -48, 0, 0 )
+
+[node name="wall5" parent="maze/line_12" index="7" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -56, 0, 1.52588e-005 )
+
+[node name="floor2" parent="maze/line_12" index="8" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -64, 0, 0 )
+
+[node name="wall6" parent="maze/line_12" index="9" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -72, 0, 1.52588e-005 )
+
+[node name="wall7" parent="maze/line_12" index="10" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -80, 0, 1.52588e-005 )
+
+[node name="wall8" parent="maze/line_12" index="11" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -88, 0, 1.52588e-005 )
+
+[node name="wall9" parent="maze/line_12" index="12" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -96, 0, 1.52588e-005 )
+
+[node name="floor3" parent="maze/line_12" index="13" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, 0 )
+
+[node name="floor4" parent="maze/line_12" index="14" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -112, 0, 0 )
+
+[node name="wall10" parent="maze/line_12" index="15" instance=ExtResource( 5 )]
+
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, -120, 0, 1.52588e-005 )
+
+[node name="wall11" parent="maze/line_12" index="16" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 1.74846e-007, 0, 1, 0, -1.74846e-007, 0, 1, -128, 0, 1.52588e-005 )
+
+[node name="wall12" parent="maze/line_12" index="17" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -2.62268e-007, 0, 1, 0, 2.62268e-007, 0, -1, -136, 0, 7.62939e-006 )
+
+[node name="floor5" parent="maze/line_12" index="18" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -144, 0, 0 )
+
+[node name="corner3" parent="maze/line_12" index="19" instance=ExtResource( 4 )]
+
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -152, 0, 0 )
 
 
